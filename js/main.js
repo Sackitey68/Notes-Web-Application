@@ -1,5 +1,14 @@
-import NotesAPI from  "./NotesAPI.js"
+import NotePresent from  "./NotePresent.js"
 
-NotesAPI.deleteNote(92613);
+const app = document.getElementById("app");
+const view = new NotePresent(app,  {
+    onNoteAdd() {
+        console.log("Let's add a note!");
+    }, 
 
-console.log(NotesAPI.getAllNotes());
+    onNoteEdit(newTitle, newBody) {
+        console.log(newTitle);
+        console.log(newBody);
+    }
+    
+});

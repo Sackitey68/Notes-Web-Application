@@ -17,5 +17,25 @@ export default class NotePresent {
             <textarea class="notes__body">Write Note...</textarea>
         </div>
         `;
+
+        const btnAddNote = this.root.querySelector(".notes__add");
+        const inpTitle = this.root.querySelector(".notes__title");
+        const inpBody = this.root.querySelector(".notes__body");
+
+        btnAddNote.addEventListener("click", () => {
+            this.onNoteAdd();
+
+        });
+
+        [inpTitle, inpBody].forEach(inputField => {
+            inputField.addEventListener("blur", () => {
+                const updatedTitle = inpTitle.value.trim();
+                const updatedBody = inpBody.value.trim();
+
+                this.onNoteEdit(updatedTitle, updatedBody);
+            });
+        });
+
+        //Hide the note preview by default
     }
 }
