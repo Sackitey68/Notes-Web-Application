@@ -1,14 +1,4 @@
-import NotePresent from  "./NotePresent.js"
+import App from "./app.js";
 
-const app = document.getElementById("app");
-const view = new NotePresent(app,  {
-    onNoteAdd() {
-        console.log("Let's add a note!");
-    }, 
-
-    onNoteEdit(newTitle, newBody) {
-        console.log(newTitle);
-        console.log(newBody);
-    }
-    
-});
+const root = document.getElementById("app");
+const app = new App(root);
