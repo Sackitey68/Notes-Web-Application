@@ -2,7 +2,7 @@ html,
 body {
     height: 100%;
     margin: 0;
-    background:linear-gradient(45deg, #dd4814, #77216f, #5e2750, #2c001e, #aea79f, #333333);
+    /* background:linear-gradient(45deg, #dd4814, #77216f, #5e2750, #2c001e, #aea79f, #333333); */
 }
 
 .notes {
@@ -12,7 +12,7 @@ body {
 
 .notes * {
     font-family: sans-serif;
-}
+} 
 
 .notes__sidebar {
     border-right: 2px solid #dddddd;
