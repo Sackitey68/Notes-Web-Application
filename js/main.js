@@ -1,8 +1,5 @@
 import NotesAPI from  "./NotesAPI.js"
 
-NotesAPI.saveNote({
-    title: "New Notes!",
-    body: "I am a new notes."
-});
+NotesAPI.deleteNote(92613);
 
 console.log(NotesAPI.getAllNotes());
